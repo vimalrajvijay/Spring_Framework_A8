@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="student" class="ioc.Student">
+		<property name="id" value="101"></property>
+		<property name="name" value="vimal"></property>
+		<property name="age" value="21"></property>
+		<property name="mobile" ref="mobile"></property>
+	</bean>
+	<bean id="mobile" class="ioc.Mobile">
+		<property name="id" value="201"></property>
+		<property name="brand" value="POCO"></property>
+		<property name="price" value="10000"></property>
+	</bean>
+</beans>
